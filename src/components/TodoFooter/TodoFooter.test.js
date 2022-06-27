@@ -34,11 +34,20 @@ const TodoFooterWithRouter = (args) => (
 
 // it should not render 'tasks' if numberOfIncompleteTasks === 1
 
+// it('should not render tasks if only 1 task', () => {
+//   // Arrange
+//   render(<TodoFooterWithRouter numberOfIncompleteTasks={1} />);
+//   // Act
+//   const numOfTasksEl = screen.queryByText(/tasks/i);
+//   // Assert
+//   expect(numOfTasksEl).not.toBeInTheDocument();
+// });
+
+// **************************************
+
 it('should not render tasks if only 1 task', () => {
   // Arrange
   render(<TodoFooterWithRouter numberOfIncompleteTasks={1} />);
-  // Act
   const numOfTasksEl = screen.queryByText(/tasks/i);
-  // Assert
   expect(numOfTasksEl).not.toBeInTheDocument();
 });
